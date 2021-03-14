@@ -6,5 +6,7 @@ App downloads products information from original site and saves them to the file
 Application was created using libs:
 
 net.sf.opencsv
+
 org.json
+
 java.net
