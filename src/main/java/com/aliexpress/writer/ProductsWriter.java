@@ -9,9 +9,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 
+import static com.aliexpress.constants.Paths.CSV_FILE_NAME;
+import static com.aliexpress.constants.Paths.CSV_FILE_PATH;
+
 public class ProductsWriter {
-    private static final String CSV_FILE_PATH = "./src/test/java/resources/";
-    private static final String CSV_FILE_NAME = "data.csv";
     private CSVWriter writer;
 
     public void writeToCSV(List<Product> list) throws IOException {

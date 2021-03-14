@@ -1,5 +1,6 @@
 package com.aliexpress;
 
+import com.aliexpress.constants.Paths;
 import com.aliexpress.model.Product;
 import com.aliexpress.writer.ProductsWriter;
 
@@ -17,7 +18,7 @@ public class Main {
         long startTime = System.currentTimeMillis();
 
         int offset = 20;
-        String url = "https://gpsfront.aliexpress.com/getRecommendingResults.do?widget_id=5547572&platform=pc";
+        String url = Paths.ROOT;
         HttpClient client = new HttpClient();
 
         List<Product> productList = client.readProducts(url + "&limit=20");
