@@ -10,17 +10,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class JsonParser {
-    //параметр, пришедший из тела ответа
+    //parameter from the response body
     public static String postbackJson;
 
     public List<Product> getProducts(String response) throws JSONException {
         List<Product> productsResult = new ArrayList<>();
 
-        //создаём объект из JSON, полученного из ответа на запрос
+        //create an object from JSON received from the HTTP response
         CustomResponse customResponseJson = getCustomResponse(response);
-        //достаём список товаров для парсинга
+        //get a list of products for parsing
         JSONArray jsonArray = new JSONArray(customResponseJson.getResults());
-        //парсинг товаров
+        //parsing of goods
         for (int i = 0; i < jsonArray.length(); i++) {
             JSONObject productJson = jsonArray.getJSONObject(i);
             long id = productJson.getLong("productId");

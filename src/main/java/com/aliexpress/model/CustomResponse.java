@@ -3,10 +3,10 @@ package com.aliexpress.model;
 import org.json.JSONArray;
 
 /**
- * Ответ в формате JSON на запрос товаров
+ * JSON response from HTTP Response
  */
 public class CustomResponse {
-    //список продуктов
+    //list of goods
     private JSONArray results;
 
     public CustomResponse(JSONArray results) {
